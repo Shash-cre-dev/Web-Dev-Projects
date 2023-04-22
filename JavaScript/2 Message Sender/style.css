@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-style: border-box;
+}
+
+body, html{
+    background-color: #6665ee;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
