@@ -1,0 +1,8 @@
+//For Data Attributes
+https://www.w3schools.com/tags/att_data-.asp
+
+//For overflow (CSS)
+https://www.w3schools.com/css/css_overflow.asp
+
+//For text-allign(CSS)
+https://www.w3schools.com/cssref/pr_text_text-align.php
