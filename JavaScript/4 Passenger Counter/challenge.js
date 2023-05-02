@@ -116,3 +116,13 @@ let Name = "Shashank Kumar";
 let greeting = "Welcome Back to your Courses ";
 
 welcomeEl.innerText = greeting + " " + Name;
+
+let welcomeEl = document.getElementById("welcome-el")
+
+// Add an emoji to the end! 👋
+// WRITE YOUR CODE BELOW HERE
+// HINT: count = count + 1
+
+welcomeEl.innerText += "👋";
+//shortcut for incrementing
+
