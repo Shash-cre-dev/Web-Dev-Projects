@@ -103,3 +103,55 @@ function increment(){
 }
 
 //DOM
+//Document Object Model
+//aka how you use JavaScript to modify a Website
+
+//document - is the HTML page
+//object - document = { }
+//model - representation of HTML elements
+
+//HTML element
+//<h2 id="count-el">0</h2>
+
+//Model
+let countEl2 = document.getElementById("count-el");
+
+//String
+
+// "anything here" or 'anything here' - is string
+
+// " anything here ' or ' anything here " - not a string
+
+let username = "per"
+console.log(username)
+
+let message = "You have three new notifications"
+console.log(message)
+
+//Concatenate
+
+console.log(message + "," + username + "!")
+
+// Create a variable, messageToUser, that contains the message we have logged
+messageToUser = "per, you have three new notifications!";
+console.log(messageToUser);
+
+
+//STRING VS NUMBERS
+//string always wins
+
+let Name = 42
+let greeting = "Hi, my name is "
+let myGreeting = greeting + Name
+console.log(myGreeting)
+
+//42 is converted to a string
+
+let points = 4
+let bonusPoints = "10"
+let totalPoints = points + bonusPoints
+console.log(totalPoints)
+
+//-o "410"
+
+

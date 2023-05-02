@@ -1,3 +1,5 @@
+//ROGER THAT
+
 // 1. Create a variable, myAge, and set its value to your age
 let myAge = 20;
 // 2. Log the myAge variable to the console
@@ -65,3 +67,52 @@ function incrementLap(){
 console.log(incrementLap());
 console.log(incrementLap());
 console.log(incrementLap());
+
+
+// 1. Create a function, save(), which logs out the count when it's called
+function save(){
+    console.log(count);
+}
+
+save();
+
+// Create a variable, message, that stores the string: "You have tree new notifications"
+let message = "You have three new notifications"
+console.log(message);
+
+// Create two variables, name and greeting. The name variable should store your name,
+// and the greeting should store e.g. "Hi, my name is "
+let Name1 = "Shashank";
+let greeting1 = "Hi, My name is"
+
+// Create a third variable, myGreeting, that contatenates the two strings
+let myGreeting = greeting1 + " " + Name1;
+
+// Log myGreeting to the console
+console.log(myGreeting);
+
+
+console.log(4 + 5) //9
+console.log("2" + "4") //"24"
+console.log("5" + 1) //"51"
+console.log(100 + "100") //"100100"
+
+
+// Grab the welcome-el paragraph and store it in a variable called welcomeEl
+
+// Create two variables (name & greeting) that contains your name
+// and the greeting we want to render on the page
+
+// Render the welcome message using welcomeEl.innerText
+
+
+//ROGER THAT
+
+//grabbing <p id="welcome-el"></p> from the HTML
+
+welcomeEl = document.getElementById("welcome-el");
+
+let Name = "Shashank Kumar";
+let greeting = "Welcome Back to your Courses ";
+
+welcomeEl.innerText = greeting + " " + Name;
