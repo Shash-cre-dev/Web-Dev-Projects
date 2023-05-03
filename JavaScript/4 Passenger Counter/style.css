@@ -28,11 +28,27 @@ button {
     border-radius: 5px;
 }
 
+.container{
+    background: white;
+    max-width: 40%;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: #B2FFFF;
+}
+
 #increment-btn {
     background: darkred;
+    border-radius: 6px;
 }
 
 #save-btn {
     background: darkgreen;
+    border-radius: 6px;
+}
+
+#delete-btn{
+    background: navy;
+    border-radius: 6px;
 }
 

@@ -18,6 +18,11 @@ function save(){
     count = 0;   
 }
 
+function remove(){
+    saveEl.textContent = " ";
+    saveEl.textContent = "Previous entires: "
+}
+
 
 
 // can odify the code for even better with replacing innerText with textContent
