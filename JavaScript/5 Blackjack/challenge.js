@@ -77,25 +77,53 @@ console.log(isAlive1)
 
 
 
-let firstCard = 10
-let secondCard = 11
-let sum = firstCard + secondCard + 4
-let hasBlackJack = false
-let isAlive = true
+let firstCard2 = 10
+let secondCard2 = 11
+let sum2 = firstCard + secondCard + 4
+let hasBlackJack2 = false
+let isAlive2 = true
 
 // 1. Declare a variable called message and assign its value to an empty string
-let message = " "
+let message2 = " "
 
 // 2. Reassign the message variable to the string we're logging out
-if (sum <= 20) {
-    message = "Do you want to draw a new card? 🙂"
+if (sum2 <= 20) {
+    message2 = "Do you want to draw a new card? 🙂"
 } else if (sum === 21) {
-    message= "Wohoo! You've got Blackjack! 🥳"
-    hasBlackJack = true
+    message2 = "Wohoo! You've got Blackjack! 🥳"
+    hasBlackJack2 = true
 } else {
-    message = "You're out of the game! 😭"
-    isAlive = false
+    message2 = "You're out of the game! 😭"
+    isAlive2 = false
 }
 
 // 3. Log it out!
-console.log(message)
+console.log(message2)
+
+
+//startGame() onlick with <p id="message-el">Want to play a round?</p>
+
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let message = ""
+
+// 1. Store the message-el paragraph in a variable called messageEl
+let messageEl = document.getElementById("message-el")
+console.log(messageEl)
+
+function startGame() {
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?"
+    } else if (sum === 21) {
+        message = "You've got Blackjack!"
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game!"
+        isAlive = false
+    }
+    // 2. Display the message in the messageEl using messageEl.textContent
+    messageEl.textContent = message
+}
