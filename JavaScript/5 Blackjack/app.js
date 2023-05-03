@@ -12,9 +12,14 @@ let message = ""
 
 //For message passing during the Game, message
 let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardEl = document.getElementById("cards-el")
+
 
 function startGame(){
     if (sum <= 20) {
+        cardEl.textContent = "Cards: " + firstCard + " " + secondCard
+        sumEl.textContent = "Sum: " + sum;
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
         message = "You've got Blackjack!"
@@ -26,5 +31,8 @@ function startGame(){
     messageEl.textContent = message    
 }
 
+function newCard() {
+    console.log("Drawing a new card from the deck!")
+}
 
 

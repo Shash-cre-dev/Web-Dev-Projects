@@ -127,3 +127,32 @@ function startGame() {
     // 2. Display the message in the messageEl using messageEl.textContent
     messageEl.textContent = message
 }
+
+
+//FOR DISPLAYING SUM
+let sumEl = document.getElementById("sum-el")
+//rendering it inside startGame() for displaying sum
+sumEl.textContent = "Sum: " + sum;
+
+// 2. Store the cards paragraph in a variable called cardsEl
+let cardEl = document.getElementById("cards-el")
+
+ // 3. Render the cars on the page using this format -> "Cards: 10 4" inside startGame()
+ cardEl.textContent = "Cards: " + firstCard + " " + secondCard
+
+
+
+
+// <!-- 1. Create a NEW CARD button, make it run newCard() on click -->
+//<button onclick="newCard()">NEW CARD</button>
+
+// 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
+function newCard() {
+    console.log("Drawing a new card from the deck!")
+}
+
+//Adding margin between buttons
+//button{
+    // margin-top: 6px;
+    // margin-bottom: 6px;
+// }
