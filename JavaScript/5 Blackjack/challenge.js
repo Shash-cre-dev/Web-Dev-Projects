@@ -156,3 +156,32 @@ function newCard() {
     // margin-top: 6px;
     // margin-bottom: 6px;
 // }
+
+
+// 1. Create a card variable, and hard code its value to a number (2-11)
+let card = 6
+// 2. Add the new card to the sum variable
+sum += card
+// 3. Call startGame()
+startGame()
+
+//FOR ARRAYS
+
+let experience = ["CEO at Scrimba", "Frontend developer at Xeneta", "People counter for Norstat"]
+
+// Make the following appear in the console:
+// Frontend developer at Xeneta
+console.log(experience[1]);
+// People counter for Norstat
+console.log(experience[2]);
+// CEO at Scrimba
+console.log(experience[0]);
+
+// Create an array that describes yourself. Use the three primitive data types you've learned
+// It should contain your name (string), your age (number), and whether you like pizza (boolean)
+
+let intro = ["Shashank Kumar", 20, false];
+
+
+
+
