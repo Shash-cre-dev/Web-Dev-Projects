@@ -103,9 +103,9 @@ console.log(message2)
 
 //startGame() onlick with <p id="message-el">Want to play a round?</p>
 
-let firstCard = 10
-let secondCard = 11
-let sum = firstCard + secondCard
+let firstCard3 = 10
+let secondCard3 = 11
+let sum = firstCard3 + secondCard3
 let hasBlackJack = false
 let isAlive = true
 let message = ""
@@ -159,9 +159,9 @@ function newCard() {
 
 
 // 1. Create a card variable, and hard code its value to a number (2-11)
-let card = 6
+let card2 = 6
 // 2. Add the new card to the sum variable
-sum += card
+sum += card2
 // 3. Call startGame()
 startGame()
 
@@ -204,5 +204,79 @@ function newCard() {
 }
 
 
+//FOR COUNTING
+// Create a for loop that counts from 10 to 100 in steps of 10
+// Use console.log to log out the numbers
+
+for(let i=10; i<=100; i++){
+    console.log(i)
+}
 
 
+//COMBINING FOR LOOP WITH ARRAY
+
+let messages1 = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately.",
+    "Same here!",
+    "Great to hear"
+]
+
+for(let i=0; i<messages1.length; i++){
+    console.log(messages1[i]);
+}
+
+//"Hey, how's it going?",        
+//"I'm great, thank you! How about you?",
+//"All good. Been working on my portfolio lately.",
+//"Same here!",
+//"Great to hear"
+
+
+let cards = [7, 3, 9]
+
+// Create a for loop that logs out all the cards in the array
+// Use cards.length to specify how long the loop should run
+
+for(let i=0; i<cards.length; i++){
+    console.log(cards[i])
+}
+
+
+//FOR RETURNING VALUE FROM A FUNCTION
+// Write a function that returns the total race time
+// Call/invoke the function and store the returned value in a new variable
+// Finally, log the variable out
+
+function totalRaceTime(){
+    return (player1Time + player2Time)
+}
+
+let totalTime = totalRaceTime()
+console.log(totalTime)
+
+//209
+
+
+// 1. Create a function, getRandomCard(), that always returns the number 5
+
+function getRandomCard() {
+    return 5
+}
+
+// 2. Use getRandomCard() to set the values of firstCard and secondCard
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+
+// 3. Use the getRandomCard() to set the value of card
+let card = getRandomCard()
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+
+function rollDice(){
+    let randomNumber = Math.floor(Math.random()*6) + 1
+    return randomNumber
+} 
+
+console.log(rollDice())

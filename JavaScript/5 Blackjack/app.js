@@ -1,7 +1,8 @@
-let firstCard = 7;
-let SecondCard = 14;
-let sum = firstCard + SecondCard;
-let hasBlackJack = false;
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let cards = [firstCard, secondCard]
+let sum = firstCard + secondCard
+let hasBlackJack = false
 let isAlive = true
 let message = ""
 
@@ -13,17 +14,25 @@ let message = ""
 //For message passing during the Game, message
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
-let cardEl = document.getElementById("cards-el")
+let cardsEl = document.getElementById("cards-el")
 
+function getRandomCard() {
+    return 5
+}
 
-function startGame(){
+function startGame() {
     renderGame()
 }
 
-function renderGame(){
+function renderGame(){  
+    cardsEl.textContent = "Cards: "  
+    //loop that renders out all the cards 
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+
+    sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
-        cardEl.textContent = "Cards: " + firstCard + " " + SecondCard
-        sumEl.textContent = "Sum: " + sum;
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
         message = "You've got Blackjack!"
@@ -32,12 +41,13 @@ function renderGame(){
         message = "You're out of the game!"
         isAlive = false
     }
-    messageEl.textContent = message    
+    messageEl.textContent = message 
 }
 
 function newCard() {
-    let card = 6
+    let card = getRandomCard()
     sum += card
+    cards.push(card)
     renderGame()
 }
 
