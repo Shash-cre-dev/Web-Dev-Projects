@@ -182,6 +182,27 @@ console.log(experience[0]);
 
 let intro = ["Shashank Kumar", 20, false];
 
+//For adding an element to the end of the array
+// Push the newMessage to the messages array, and then log out the array
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+let newMessage = "Same here!"
+messages.push(newMessage)
+
+console.log(messages)
+
+
+function newCard() {
+    let card = 6
+    sum += card
+    // Push the card to the cards array
+    cards.push(card)
+    renderGame()
+}
+
 
 
 

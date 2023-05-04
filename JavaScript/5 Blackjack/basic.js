@@ -59,3 +59,8 @@ let cards = [7, 4]
 cards.push(6)
 console.log(cards)
 // [7, 4, 6]
+
+//For removing last element of the array , use pop
+
+cards.pop()
+console.log(cards) // [7,4]
