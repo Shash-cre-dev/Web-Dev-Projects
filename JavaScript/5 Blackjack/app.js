@@ -1,4 +1,12 @@
 //Before the Start of the Game
+
+//Object for Player info
+let player = {
+    name: "Shashank",
+    chips: 200
+}
+let cards = []
+let sum = 0
 let hasBlackJack = false
 let isAlive = false
 let message = ""
@@ -12,6 +20,10 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
+
+
+playerEl.textContent = player.name + ": $" + player.chips
 
 //taken ace as 11// if (king, queen, jack) 11-13 taken 10
 // if 1     -> return 11
@@ -58,10 +70,14 @@ function renderGame(){
 }
 
 function newCard() {
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if(isAlive === true && hasBlackJack === false){
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }
+
 
 

@@ -249,4 +249,38 @@ function recommendMovie() {
 }
 
 
+//OBJECTS
+// Objects - store data in-depth - composite / complex data type
+// key-value pairs
 
+let course = {
+    title: "Learn CSS Grid for free",
+    lessons: 16,
+    creator: "Per Harald Borgen",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+
+//For accessing these key value pairs (.) operator used
+
+console.log( course.length )
+//63
+
+console.log( course.tags )
+//["html", "css"]
+
+//METHODS
+//Functions defined inside objects are known as methods
+
+let player = {
+    name: "Shashank",
+    chips: 200,
+    sayHello: function() {
+        console.log("Let's win this thing")
+    }
+}
+
+//for calling method
+player.sayHello()

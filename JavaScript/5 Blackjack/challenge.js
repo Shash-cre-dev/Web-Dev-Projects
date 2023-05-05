@@ -337,4 +337,35 @@ function startGame() {
     renderGame()
 }
 
+//FOR OBJECTS
+// Create an object that represents an airbnb castle listing.
+// It should contain at least one boolean, one string, one number, and one array
+// Log out at least two of the keys using the dot notation
 
+let castle = {
+    Name : "Kingsman",
+    Rent : 100,
+    Private : true,
+    rooms: ["AC", "NON AC"]
+}
+
+console.log(castle.Name)
+//Kingsman
+console.log(castle.rooms)
+//["AC", "NON AC"]
+
+//MODIFYING CODE
+
+// 1. Create a paragraph with an id of "player-el"
+//<p id="player-el"><p></p>
+
+// 2. Create the player object. Give it two keys, name and chips, and set their values
+let player = {
+    Name : " ",
+    chips: " "
+}
+// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
+let playerEl = document.getElementById("player-el")
+
+// 4. Render the player's name and chips in playerEl
+playerEl.textContent = player.Name + " " + player.chips
