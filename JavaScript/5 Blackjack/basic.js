@@ -188,3 +188,65 @@ let randomNumber4 = Math.floor( Math.random() * 6 ) + 1
 console.log(randomNumber4)
 //  1 | 2 | 3 | 4 | 5 | 6 
 
+//LOGICAL OPERATIONS
+
+
+//LOGICAL AND - &&
+//both the conditions defined on the LHS and RHS must be true;
+
+//Used in places where both of the conditions must be met
+
+let hasCompletedCourse = true
+let givesCertificate = true
+
+if (hasCompletedCourse === true && givesCertificate === true) {
+    generateCertificate()
+}
+
+function generateCertificate() {
+    console.log("Generating certificate....")
+}
+
+//Shortcut 
+if (hasCompletedCourse && givesCertificate) {
+    generateCertificate()
+}
+
+//for true no need to mention === true;
+
+// Create an if statement that checks that both variables are false.
+// If so, run the showSolution() function
+
+let hasSolvedChallenge = false
+let hasHintsLeft = false
+
+if(hasSolvedChallenge === false && hasHintsLeft===false){
+    showSolution()
+}
+
+function showSolution() {
+    console.log("Showing the solution....")
+}
+
+
+//LOGICAL OR ||
+// Any condition on RHS or LHS true is true it runs
+
+//Used in places where any of the conditions must be met
+
+// Create two boolean variables, likesDocumentaries and likesStartups
+// Use an OR statement (||) to call recommendMovie() if either of those variables are true
+
+let likesDocumentaries = true
+let likesStartups = true
+
+if (likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}
+
+
+

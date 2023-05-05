@@ -106,9 +106,9 @@ console.log(message2)
 let firstCard3 = 10
 let secondCard3 = 11
 let sum = firstCard3 + secondCard3
-let hasBlackJack = false
-let isAlive = true
-let message = ""
+let hasBlackJack5 = false
+let isAlive5 = true
+let message5 = ""
 
 // 1. Store the message-el paragraph in a variable called messageEl
 let messageEl = document.getElementById("message-el")
@@ -116,16 +116,16 @@ console.log(messageEl)
 
 function startGame() {
     if (sum <= 20) {
-        message = "Do you want to draw a new card?"
+        message5 = "Do you want to draw a new card?"
     } else if (sum === 21) {
-        message = "You've got Blackjack!"
-        hasBlackJack = true
+        message5 = "You've got Blackjack!"
+        hasBlackJack5 = true
     } else {
-        message = "You're out of the game!"
-        isAlive = false
+        message5 = "You're out of the game!"
+        isAlive5 = false
     }
     // 2. Display the message in the messageEl using messageEl.textContent
-    messageEl.textContent = message
+    messageEl.textContent = message5
 }
 
 
@@ -280,3 +280,61 @@ function rollDice(){
 } 
 
 console.log(rollDice())
+
+// Make this function return a random number between 1 and 13
+function getRandomCard() {
+    return Math.floor( Math.random()*13 ) + 1 // 1-13
+}
+
+//Improvising with respect to cards
+//taken ace as 11// if (king, queen, jack) 11-13 taken 10
+
+//MY CODE
+function getRandomCard() {
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let randomCard =  Math.floor( Math.random()*13 ) + 1
+    if(randomCard === 1){
+        return 11
+    }
+    else if(randomCard === 11 || randomCard === 12 || randomCard === 13){
+        return 10
+    }
+    else{
+        return randomCard
+    }
+}
+
+//ALTERNATE SOLUTION
+function getRandomCard() {
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
+    }
+}
+
+//MODIFICATIONS IN THE GAME
+
+//BEFORE GAME START
+let hasBlackJack = false
+let isAlive = false
+let message = ""
+
+//AFTER THE START OF THE GAME
+function startGame() {
+    //After clicking start Button
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
+
+
