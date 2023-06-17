@@ -1,0 +1,13 @@
+.querySelector()
+.querySelectorAll()
+.removeEventListener()
+.textContent
+.Math.random()
+.length
+.creatElement()
+.setAttribute()
+.append()
+.getAttribute()
+.push()
+alert()
+setTimeout()
