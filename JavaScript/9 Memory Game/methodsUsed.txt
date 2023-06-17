@@ -11,3 +11,18 @@
 .push()
 alert()
 setTimeout()
+
+Shuffling an Array
+arrayName.sort(()=> 0.5 - Math.random())
+
+.createElement()
+creates an HTML element when passed as an Attribute
+Eg: document.createElement('img')
+It creates an img tag in HTML
+
+setTimeout()
+runs a function passed as a parameter after a defined time 
+
+Eg: setTimeout(checkMatch, 500)
+runs the checkMatch function after 500ms or 0.5s
+
