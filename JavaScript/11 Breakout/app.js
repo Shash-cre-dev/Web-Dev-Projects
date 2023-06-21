@@ -1,51 +1,49 @@
-const squares = document.querySelectorAll('.square')
-const mole = document.querySelector('.mole')
-const timeLeft = document.querySelector('#time-left')
-const score = document.querySelector('#score')
 
-let result = 0
-let hitPosition
-let currentTime = 60
-let timerId = null
+const grid = document.querySelector('.grid')
+const blockWidth = 100
+const blockHeight = 20
 
-function randomSquare() {
-  squares.forEach(square => {
-    square.classList.remove('mole')
-  })
-
-  let randomSquare = squares[Math.floor(Math.random() * 9)]
-  randomSquare.classList.add('mole')
-
-  hitPosition = randomSquare.id
-}
-
-squares.forEach(square => {
-  square.addEventListener('mousedown', () => {
-    if (square.id == hitPosition) {
-      result++
-      score.textContent = result
-      hitPosition = null
-    }
-  })
-})
-
-function moveMole() {
-  timerId = setInterval(randomSquare, 750)
-}
-
-moveMole()
-
-function countDown() {
-  currentTime--
-  timeLeft.textContent = currentTime
-
-  if (currentTime == 0) {
-    clearInterval(countDownTimerId)
-    clearInterval(timerId)
-    alert('GAME OVER! Your final score is ' + result)
+//Create Block
+class Block {
+  constructor(xAxis, yAxis){
+    this.blockLeft = [xAxis, yAxis]
+    this.bottomRight = [xAxis + blockWidth, yAxis]
+    this.topLeft = [xAxis, yAxis + blockHeight]
+    this.topRight = [xAxis + blockWidth, yAxis + blockHeight]
   }
-  a
 }
 
-let countDownTimerId = setInterval(countDown, 1000)
+//All the Blocks
+const blocks = [
+  new Block(10, 270),
+  new Block(120, 270),
+  new Block(230, 270),
+  new Block(340, 270),
+  new Block(450, 270),
+  
+  new Block(10, 270),
+  new Block(120, 270),
+  new Block(230, 270),
+  new Block(340, 270),
+  new Block(450, 270),
+
+  new Block(10, 270),
+  new Block(120, 270),
+  new Block(230, 270),
+  new Block(340, 270),
+  new Block(450, 270),
+]
+
+//Draw all  the Block
+function addBlocks(){
+  for(let i = 0; i < blocks.length; i++){
+    const block = document.createElement('div')
+    block.classList.add('block')
+    block.style.left = blocks[i].bottomLeft[0] + 'px'
+    block.style.bottom = blocks[i].bottomLeft[1] + 'px'
+    grid.appendChild(block)
+  }
+}
+
+addBlocks()
 
